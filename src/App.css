@@ -1,0 +1,46 @@
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+}
+
+.two-box {
+  flex: 50%;
+}
+
+.middle-box {
+  flex: 60%
+}
+
+.dominant-box {
+  flex: 80%
+}
+
+.side-box {
+  flex: 20%
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 600px) {
+  .first-layer-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-first-layer-box {
+    flex-direction: column-reverse;
+  }
+}
