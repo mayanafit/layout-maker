@@ -1,46 +1,65 @@
 
-.flex-row {
+.first-layer {
+  display: grid;
+}
+
+.sub-first-layer {
   display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  flex: 100%;
-}
-
-.two-box {
-  flex: 50%;
-}
-
-.middle-box {
-  flex: 60%
-}
-
-.dominant-box {
-  flex: 80%
-}
-
-.side-box {
-  flex: 20%
-}
-
-.flex-col-reverse {
   flex-direction: column-reverse;
 }
 
-.flex-row-reverse {
-  flex-direction: row-reverse;
+.bottom-sub-first-layer {
+  display: grid;
+  grid: auto / auto auto
+}
+
+.second-layer {
+  display: grid;
+  grid-template-areas: 
+  "item7 item7"
+  "item5 item8"
+  "item6 item9"
+  ;
+}
+
+.item5 {
+  grid-area: item5;
+} 
+
+.item6 {
+  grid-area: item6;
+} 
+
+.item7 {
+  grid-area: item7;
+} 
+
+.item8 {
+  grid-area: item8;
+}
+
+.item9 {
+  grid-area: item9;
 }
 
 @media (min-width: 600px) {
-  .first-layer-box {
+  .first-layer {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
+  .sub-first-layer {
     display: flex;
     flex-direction: column;
   }
 
-  .sub-first-layer-box {
-    flex-direction: column-reverse;
+  .second-layer {
+    display: grid;
+    grid-template-areas:
+      "item5 item7 item7 item7 item8"
+      "item6 item7 item7 item7 item9"
+      "item6 item7 item7 item7 item9"
+      "item6 item7 item7 item7 item9"
+    ;
   }
 }
